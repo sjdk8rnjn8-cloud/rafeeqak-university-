@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#123b35">
+<meta name="description" content="رفيقك الجامعي — دليل إرشادي للطلاب الوافدين إلى جامعة المنوفية في شبين الكوم.">
+<title>رفيقك الجامعي | دليلك في المنوفية</title>
+<style>
+:root{--green:#123b35;--green2:#1d5b4e;--mint:#dcefe7;--cream:#f7f5ef;--gold:#d8b46a;--ink:#1d2a27;--muted:#65736d;--white:#fff;--line:#e4e9e4;--shadow:0 14px 35px rgba(18,59,53,.09)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:86px}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Tahoma,Arial,sans-serif;line-height:1.75}
+a{color:inherit;text-decoration:none}button,input{font:inherit}.wrap{width:min(1160px,92%);margin:auto}
+header{position:sticky;top:0;z-index:30;background:rgba(247,245,239,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:74px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:900;color:var(--green);font-size:1.15rem}
+.logo-mark{width:40px;height:40px;display:grid;place-items:center;border-radius:14px;background:var(--green);color:var(--gold);font-size:1.2rem}
+.navlinks{display:flex;align-items:center;gap:20px}.navlinks a{color:#52635c;font-size:.91rem}.navlinks a:hover{color:var(--green)}
+.lang,.menu{border:1px solid #cddbd4;background:#fff;border-radius:11px;padding:8px 12px;color:var(--green);font-weight:750;cursor:pointer}.menu{display:none}
+.hero{padding:58px 0 46px;background:radial-gradient(ellipse at 85% 10%,#e0eee5 0,transparent 36%)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:42px}
+.kicker{display:inline-flex;align-items:center;gap:8px;color:var(--green2);font-weight:800;font-size:.9rem;background:#e6f0e9;border-radius:999px;padding:7px 13px}
+h1{font-size:clamp(2.45rem,6vw,4.7rem);line-height:1.15;letter-spacing:-1.5px;margin:19px 0 17px;color:var(--green)}
+h1 span{color:#b18a3d}.hero p{color:var(--muted);font-size:1.08rem;max-width:620px;margin:0 0 25px}
+.actions{display:flex;flex-wrap:wrap;gap:12px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 19px;border-radius:13px;font-weight:800;border:1px solid var(--green);transition:.2s;cursor:pointer}.btn:hover{transform:translateY(-2px)}.primary{background:var(--green);color:#fff}.secondary{color:var(--green);background:transparent}
+.hero-art{position:relative;min-height:385px;border-radius:30px;overflow:hidden;background:#d6e7dc;box-shadow:var(--shadow)}
+.hero-art img{width:100%;height:100%;min-height:385px;object-fit:cover;display:block}
+.hero-label{position:absolute;right:18px;bottom:18px;left:18px;background:rgba(18,59,53,.92);color:#fff;border:1px solid rgba(255,255,255,.25);border-radius:18px;padding:16px 18px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.hero-label small{display:block;color:#d9e9e1}.hero-label strong{font-size:1.04rem}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:26px}.stat{border:1px solid var(--line);background:#fff;border-radius:15px;padding:13px 15px}.stat strong{display:block;color:var(--green);font-size:1.12rem}.stat span{font-size:.82rem;color:var(--muted)}
+section{padding:65px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:25px}.eyebrow{color:#9a7730;font-size:.8rem;font-weight:900;letter-spacing:.6px}.section-head h2{font-size:clamp(1.75rem,4vw,2.65rem);line-height:1.25;margin:5px 0;color:var(--green)}.section-head p{color:var(--muted);max-width:620px;margin:0}
+.searchbar{display:flex;gap:10px;margin:20px 0 25px}.searchbar input{width:100%;border:1px solid #d7e0d9;border-radius:13px;padding:13px 15px;background:#fff;outline:none}.searchbar input:focus{border-color:var(--green2);box-shadow:0 0 0 3px #dcefe7}
+.category-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+.cat-card{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 6px 20px rgba(18,59,53,.04);transition:.2s}.cat-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.cat-card img{width:100%;height:170px;object-fit:cover;display:block;background:#e2e9e2}.cat-body{padding:19px}.cat-body h3{margin:0 0 5px;color:var(--green);font-size:1.13rem}.cat-body p{margin:0 0 14px;color:var(--muted);font-size:.92rem}.cat-link{color:var(--green2);font-weight:850;font-size:.9rem}
+.notice{margin-top:22px;padding:14px 16px;background:#fff7df;border:1px solid #eedca6;border-radius:13px;color:#6d5721;font-size:.9rem}
+.soft{background:#edf3ed}.split{display:grid;grid-template-columns:1fr 1fr;gap:22px}.info-panel{background:#fff;border:1px solid var(--line);border-radius:22px;padding:25px}.info-panel h3{margin:0 0 9px;color:var(--green);font-size:1.3rem}.info-panel p{color:var(--muted);margin:0 0 14px}.list{list-style:none;padding:0;margin:0;display:grid;gap:11px}.list li{display:flex;gap:10px;align-items:flex-start}.check{width:25px;height:25px;flex:0 0 25px;display:grid;place-items:center;border-radius:8px;background:var(--mint);color:var(--green);font-weight:900}
+.help-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.help{padding:21px;border-radius:18px;background:#fff;border:1px solid var(--line)}.help .icon{font-size:1.6rem}.help h3{margin:7px 0;color:var(--green)}.help p{margin:0;color:var(--muted);font-size:.92rem}
+.team{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.member{background:#fff;border:1px solid var(--line);border-radius:18px;padding:21px;text-align:center}.avatar{width:58px;height:58px;margin:0 auto 12px;border-radius:19px;background:var(--green);color:var(--gold);display:grid;place-items:center;font-size:1.25rem;font-weight:900}.member h3{font-size:1rem;margin:0 0 4px;color:var(--green)}.member p{font-size:.85rem;color:var(--muted);margin:0}
+.callout{background:var(--green);color:#fff;border-radius:25px;padding:31px;display:flex;justify-content:space-between;align-items:center;gap:22px}.callout h2{margin:0 0 7px;font-size:clamp(1.5rem,3vw,2.2rem)}.callout p{margin:0;color:#d6e6df}.callout .btn{background:var(--gold);border-color:var(--gold);color:#1c2b24;white-space:nowrap}
+footer{padding:26px 0;background:#0f302b;color:#d9e6df;font-size:.86rem}footer .foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}footer span{color:#b8cfc4}
+.places-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin-top:20px}.place-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 6px 20px rgba(18,59,53,.04);display:flex;flex-direction:column;gap:8px;min-width:0}.place-top{display:flex;align-items:center;gap:11px}.place-icon{width:46px;height:46px;flex:0 0 46px;border-radius:14px;background:var(--mint);display:grid;place-items:center;font-size:1.45rem}.place-card h3{margin:0;color:var(--green);font-size:1.02rem}.place-type{font-size:.78rem;color:#9a7730;font-weight:800}.place-card p{margin:0;color:var(--muted);font-size:.88rem}.place-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:5px}.place-actions a{border:1px solid #d5e2da;border-radius:10px;padding:7px 10px;font-size:.83rem;font-weight:800;color:var(--green2)}.place-actions a:hover{background:var(--mint)}.section-mini-title{margin:27px 0 8px;color:var(--green);font-size:1.35rem}.data-note{font-size:.83rem;color:var(--muted);margin-top:18px}.hidden{display:none!important}
+@media(max-width:850px){.places-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.navlinks{gap:11px}.navlinks a{font-size:.82rem}.hero-grid{gap:25px}.category-grid{grid-template-columns:repeat(2,1fr)}.team{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:650px){.places-grid{grid-template-columns:1fr}.menu{display:block}.navlinks{display:none;position:absolute;top:67px;right:4%;left:4%;padding:12px;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);flex-direction:column;align-items:stretch}.navlinks.open{display:flex}.navlinks a{padding:8px 10px;font-size:.95rem}.nav{min-height:67px}.hero{padding-top:34px}.hero-grid{grid-template-columns:1fr}.hero-art,.hero-art img{min-height:260px}.hero-art{order:-1}.hero-label{padding:12px}.stats{gap:8px}.stat{padding:10px}.stat span{font-size:.75rem}section{padding:48px 0}.section-head{display:block}.section-head p{margin-top:8px}.category-grid,.split,.help-grid{grid-template-columns:1fr}.cat-card img{height:190px}.team{grid-template-columns:repeat(2,1fr)}.callout{align-items:flex-start;flex-direction:column;padding:25px}.searchbar{margin-top:16px}}
+
+.nav-tools{display:flex;align-items:center;gap:10px}.navlinks{display:flex;align-items:center;gap:13px}.navlinks a{white-space:nowrap}.language-picker{display:flex;align-items:center;gap:5px;border:1px solid #cddbd4;background:#fff;border-radius:11px;padding:7px 9px;color:var(--green)}.language-picker select{max-width:125px;border:0;outline:0;background:transparent;color:var(--green);font-weight:750;cursor:pointer}.hero-placeholder{width:100%;height:100%;min-height:385px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;background:radial-gradient(circle at 50% 35%,#f9f1d9 0,#dcefe7 42%,#b8d4c6 100%);color:var(--green);text-align:center}.campus-icon{font-size:clamp(5rem,12vw,8rem);filter:drop-shadow(0 12px 10px #123b3520)}.hero-placeholder strong{font-size:1.8rem;font-weight:900}.hero-placeholder span{color:#52635c}.hero-art img{display:none}.card-placeholder{height:170px;display:grid;place-items:center;font-size:4.2rem;background:linear-gradient(135deg,#e7f1e9,#d3e5da)}.card-placeholder.cafe{background:linear-gradient(135deg,#f4eadc,#e9d7bd)}.card-placeholder.pharmacy{background:linear-gradient(135deg,#e4f0ed,#c9e5df)}.card-placeholder.housing{background:linear-gradient(135deg,#f3eddf,#e6dfc8)}.card-placeholder.transport{background:linear-gradient(135deg,#e5edf4,#cfdeed)}.card-placeholder.university{background:linear-gradient(135deg,#e8e8f3,#d5d7eb)}
+#google_translate_element{position:fixed!important;left:0!important;bottom:0!important;width:1px!important;height:1px!important;overflow:hidden!important;opacity:.01!important;pointer-events:none!important;z-index:-1!important}.goog-te-banner-frame{display:none!important}body{top:0!important}
+@media(max-width:1050px){.navlinks{gap:8px}.navlinks a{font-size:.78rem}.language-picker select{max-width:100px}}
+@media(max-width:850px){.nav-tools{gap:8px}.navlinks{display:none;position:absolute;top:67px;right:4%;left:4%;padding:12px;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);flex-direction:column;align-items:stretch;max-height:75vh;overflow:auto}.navlinks.open{display:flex}.navlinks a{padding:8px 10px;font-size:.95rem}.menu{display:block}.hero-placeholder{min-height:260px}.card-placeholder{height:190px}}
+
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap nav">
+  <a class="logo" href="#home"><span class="logo-mark">ر</span><span class="brand-name">رفيقك الجامعي</span></a>
+  <div class="nav-tools">
+   <button class="menu" id="menuBtn" aria-expanded="false" aria-controls="navLinks">☰ القائمة</button>
+   <nav class="navlinks" id="navLinks" aria-label="القائمة الرئيسية">
+    <a href="#guide">أقسام الدليل</a><a href="#restaurants">المطاعم والكافيهات</a><a href="#essentials">الصيدليات</a><a href="#housing">السكن والمواصلات</a><a href="#university">الخدمات الجامعية</a><a href="#help">حل المشكلات</a><a href="#team">فريق العمل</a>
+   </nav>
+   <label class="language-picker"><span>🌐</span><select id="languageSelect" aria-label="Choose language"><option value="ar">العربية</option><option value="en">English</option><option value="fr">Français</option><option value="zh-CN">中文</option><option value="tr">Türkçe</option><option value="ru">Русский</option></select></label>
+  </div>
+ </div>
+</header>
+<main>
+<section class="hero" id="home">
+ <div class="wrap hero-grid">
+  <div>
+   <span class="kicker" data-ar="دليلك للحياة الجامعية في المنوفية" data-en="Your guide to student life in Menoufia">دليلك للحياة الجامعية في المنوفية</span>
+   <h1 data-ar="ابدأ رحلتك الجامعية<br><span>وأنت مطمّن.</span>" data-en="Start your university journey<br><span>with confidence.</span>">ابدأ رحلتك الجامعية<br><span>وأنت مطمّن.</span></h1>
+   <p data-ar="رفيقك الجامعي دليل إرشادي يساعد الطلاب الوافدين من خارج مصر على التعرّف على شبين الكوم، والوصول إلى الخدمات اليومية، وفهم أهم الإرشادات الجامعية." data-en="Rafeeqak Al-Jami‘i is a practical guide for international students arriving from outside Egypt to study at Menoufia University. Explore daily services, local essentials, and university guidance.">رفيقك الجامعي دليل إرشادي يساعد الطلاب الوافدين من خارج مصر على التعرّف على شبين الكوم، والوصول إلى الخدمات اليومية، وفهم أهم الإرشادات الجامعية.</p>
+   <div class="actions"><a class="btn primary" href="#guide" data-ar="استكشف الدليل ←" data-en="Explore the guide ←">استكشف الدليل ←</a><a class="btn secondary" href="#help" data-ar="محتاج مساعدة؟" data-en="Need help?">محتاج مساعدة؟</a></div>
+   <div class="stats">
+    <div class="stat"><strong data-ar="دليل واحد" data-en="One guide">دليل واحد</strong><span data-ar="للاحتياجات اليومية" data-en="For daily needs">للاحتياجات اليومية</span></div>
+    <div class="stat"><strong data-ar="عربي + English" data-en="Arabic + English">عربي + English</strong><span data-ar="محتوى ثنائي اللغة" data-en="Bilingual information">محتوى ثنائي اللغة</span></div>
+    <div class="stat"><strong data-ar="شبين الكوم" data-en="Shebin El-Kom">شبين الكوم</strong><span data-ar="نطاق الدليل الأساسي" data-en="Main guide area">نطاق الدليل الأساسي</span></div>
+   </div>
+  </div>
+  <div class="hero-art">
+   <div class="hero-placeholder" role="img" aria-label="رمز للحياة الجامعية"><div class="campus-icon">🎓</div><strong>رفيقك الجامعي</strong><span>جامعة المنوفية · شبين الكوم</span></div>
+   <div class="hero-label"><div><strong data-ar="كل اللي تحتاج تعرفه في مكان واحد" data-en="Everything you need, in one place">كل اللي تحتاج تعرفه في مكان واحد</strong><small data-ar="خدمات • إرشادات • حياة يومية" data-en="Services • Guidance • Daily life">خدمات • إرشادات • حياة يومية</small></div><span>✦</span></div>
+  </div>
+ </div>
+</section>
+
+<section id="guide">
+ <div class="wrap">
+  <div class="section-head"><div><div class="eyebrow">THE GUIDE / الدليل</div><h2 data-ar="اختار القسم اللي محتاجه" data-en="Find what you need">اختار القسم اللي محتاجه</h2></div><p data-ar="دليل عملي مرتب حسب احتياجات الطالب، مع صور توضيحية وروابط مباشرة للأقسام. بيانات الأماكن وأرقام التواصل تُضاف بعد التحقق من مصادرها." data-en="A practical guide organized around student needs. Place details and phone numbers should be added only after verification.">دليل عملي مرتب حسب احتياجات الطالب، مع صور توضيحية وروابط مباشرة للأقسام. بيانات الأماكن وأرقام التواصل تُضاف بعد التحقق من مصادرها.</p></div>
+  <div class="searchbar"><input id="searchInput" type="search" placeholder="ابحث باسم مطعم أو كافيه أو صيدلية أو قسم..." aria-label="ابحث في الدليل"></div>
+  <div class="category-grid" id="categoryGrid">
+   <article class="cat-card" data-keywords="مطاعم أكل وجبات restaurants food"><div class="card-placeholder food" aria-label="رمز المطاعم">🍽️</div><div class="cat-body"><h3 data-ar="المطاعم" data-en="Restaurants">المطاعم</h3><p data-ar="أماكن للأكل اليومي وخيارات تناسب الميزانيات المختلفة." data-en="Places for everyday meals and different budgets.">أماكن للأكل اليومي وخيارات تناسب الميزانيات المختلفة.</p><a class="cat-link" href="#restaurants" data-ar="اعرف أكتر ←" data-en="Learn more ←">اعرف أكتر ←</a></div></article>
+   <article class="cat-card" data-keywords="كافيهات قهوة cafes coffee"><div class="card-placeholder cafe" aria-label="رمز الكافيهات">☕</div><div class="cat-body"><h3 data-ar="الكافيهات" data-en="Cafés">الكافيهات</h3><p data-ar="أماكن للقعدة والمذاكرة واللقاء مع الأصدقاء." data-en="Places to study, relax, or meet friends.">أماكن للقعدة والمذاكرة واللقاء مع الأصدقاء.</p><a class="cat-link" href="#restaurants" data-ar="اعرف أكتر ←" data-en="Learn more ←">اعرف أكتر ←</a></div></article>
+   <article class="cat-card" data-keywords="صيدليات دواء pharmacies medicine"><div class="card-placeholder pharmacy" aria-label="رمز الصيدليات">💊</div><div class="cat-body"><h3 data-ar="الصيدليات" data-en="Pharmacies">الصيدليات</h3><p data-ar="كيفية العثور على صيدلية قريبة والتحقق من مواعيدها." data-en="How to find nearby pharmacies and verify their hours.">كيفية العثور على صيدلية قريبة والتحقق من مواعيدها.</p><a class="cat-link" href="#essentials" data-ar="اعرف أكتر ←" data-en="Learn more ←">اعرف أكتر ←</a></div></article>
+   <article class="cat-card" data-keywords="سكن شقق مدن جامعية housing dorms accommodation"><div class="card-placeholder housing" aria-label="رمز السكن">🏠</div><div class="cat-body"><h3 data-ar="السكن والمدن الجامعية" data-en="Housing & dorms">السكن والمدن الجامعية</h3><p data-ar="نقاط مهمة قبل اختيار سكن، وأسئلة تسألها قبل الاتفاق." data-en="What to check before choosing accommodation.">نقاط مهمة قبل اختيار سكن، وأسئلة تسألها قبل الاتفاق.</p><a class="cat-link" href="#housing" data-ar="اعرف أكتر ←" data-en="Learn more ←">اعرف أكتر ←</a></div></article>
+   <article class="cat-card" data-keywords="مواصلات انتقال transport buses directions"><div class="card-placeholder transport" aria-label="رمز المواصلات">🚌</div><div class="cat-body"><h3 data-ar="المواصلات" data-en="Transportation">المواصلات</h3><p data-ar="إرشادات عامة للتنقل داخل شبين الكوم والوصول للجامعة." data-en="Practical guidance for getting around Shebin El-Kom.">إرشادات عامة للتنقل داخل شبين الكوم والوصول للجامعة.</p><a class="cat-link" href="#housing" data-ar="اعرف أكتر ←" data-en="Learn more ←">اعرف أكتر ←</a></div></article>
+   <article class="cat-card" data-keywords="جامعة خدمات طلابية إرشادات university student services"><div class="card-placeholder university" aria-label="رمز الجامعة">🎓</div><div class="cat-body"><h3 data-ar="الخدمات والإرشادات الجامعية" data-en="University services">الخدمات والإرشادات الجامعية</h3><p data-ar="خطوات عامة لمعرفة الجهة المختصة والأوراق المطلوبة." data-en="How to identify the right university office and required documents.">خطوات عامة لمعرفة الجهة المختصة والأوراق المطلوبة.</p><a class="cat-link" href="#university" data-ar="اعرف أكتر ←" data-en="Learn more ←">اعرف أكتر ←</a></div></article>
+  </div>
+  <div class="notice" data-ar="تنبيه: الرموز هنا بديلة عن الصور لتسريع التحميل. راجع العناوين والأرقام والمواعيد قبل الاعتماد عليها." data-en="Note: Icons replace photos for faster loading. Verify addresses, phone numbers, and opening hours before relying on them.">تنبيه: الرموز هنا بديلة عن الصور لتسريع التحميل. راجع العناوين والأرقام والمواعيد قبل الاعتماد عليها.</div>
+ </div>
+</section>
+
+<section class="soft" id="restaurants">
+ <div class="wrap">
+  <div class="section-head"><div><div class="eyebrow">FOOD & COFFEE</div><h2 data-ar="المطاعم والكافيهات والصيدليات" data-en="Food, cafés & pharmacies">المطاعم والكافيهات والصيدليات</h2></div><p data-ar="هيتجمع هنا اسم المكان، العنوان، رقم التواصل، نطاق السعر، وموقعه على الخريطة بعد مراجعة المعلومات." data-en="Each listing will include the name, address, contact number, price range, and map location after verification.">هيتجمع هنا اسم المكان، العنوان، رقم التواصل، نطاق السعر، وموقعه على الخريطة بعد مراجعة المعلومات.</p></div>
+  <h3 class="section-mini-title" data-ar="🍽️ مطاعم شبين الكوم" data-en="🍽️ Restaurants in Shebin El-Kom">🍽️ مطاعم شبين الكوم</h3>
+  <div class="places-grid">
+   <article class="place-card"><div class="place-top"><div class="place-icon">🌯</div><div><h3>شامينا المداح</h3><span class="place-type">شاورما ومشويات</span></div></div><p data-ar="شارع عاطف السادات (باريس)، شبين الكوم." data-en="Atif El-Sadat (Paris) Street, Shebin El-Kom.">شارع عاطف السادات (باريس)، شبين الكوم.</p><p>☎ 01120210400</p><div class="place-actions"><a href="tel:01120210400">اتصل بالمكان</a><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Shamina+El+Maddah+Shebin+El+Kom">الخريطة</a></div></article>
+   <article class="place-card"><div class="place-top"><div class="place-icon">🥙</div><div><h3>مطاعم الدمشقي</h3><span class="place-type">أكل سوري ووجبات</span></div></div><p data-ar="فرع شارع الجلاء البحري أمام مسجد المغفرة، وله فرع بشارع باريس." data-en="El-Galaa El-Bahary branch opposite Al-Maghfira Mosque; another branch on Paris Street.">فرع شارع الجلاء البحري أمام مسجد المغفرة، وله فرع بشارع باريس.</p><p>☎ 01013622622</p><div class="place-actions"><a href="tel:01013622622">اتصل بالمكان</a><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=El+Demeshki+Shebin+El+Kom">الخريطة</a><a target="_blank" rel="noopener" href="https://eldemeshki.com/about-us">الموقع الرسمي</a></div></article>
+   <article class="place-card"><div class="place-top"><div class="place-icon">🍗</div><div><h3>مطعم عرابي</h3><span class="place-type">مشويات ووجبات</span></div></div><p>شارع المصنع، شبين الكوم.</p><p>☎ 01070003535</p><div class="place-actions"><a href="tel:01070003535">اتصل بالمكان</a><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Orabi+Restaurant+Shebin+El+Kom">الخريطة</a></div></article>
+   <article class="place-card"><div class="place-top"><div class="place-icon">🍕</div><div><h3>دون فيتو</h3><span class="place-type">بيتزا وفطائر</span></div></div><p>شارع عاطف السادات (باريس)، شبين الكوم.</p><p>☎ 01090767671 <span class="place-type">(تحقق من الرقم قبل الاتصال)</span></p><div class="place-actions"><a href="tel:01090767671">اتصل بالمكان</a><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Don+Vito+Shebin+El+Kom">الخريطة</a></div></article>
+   <article class="place-card"><div class="place-top"><div class="place-icon">🍝</div><div><h3>سوب آند باستا</h3><span class="place-type">مكرونة ووجبات</span></div></div><p>شارع الجلاء البحري، مساكن التعاونيات، أمام مسجد المغفرة.</p><p>☎ 01090474455</p><div class="place-actions"><a href="tel:01090474455">اتصل بالمكان</a><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Soup+and+Pasta+Shebin+El+Kom">الخريطة</a></div></article>
+   <article class="place-card"><div class="place-top"><div class="place-icon">🍳</div><div><h3>مطعم الغلبان</h3><span class="place-type">فطار وأكل شعبي</span></div></div><p>منطقة وسط شبين الكوم؛ افتح الخريطة لتحديد الموقع.</p><p>☎ 01012160428</p><div class="place-actions"><a href="tel:01012160428">اتصل بالمكان</a><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Matam+El+Ghalbaan+Shebin+El+Kom">الخريطة</a></div></article>
+  </div>
+  <h3 class="section-mini-title" data-ar="☕ كافيهات وقعدات للمذاكرة" data-en="☕ Cafés and study spots">☕ كافيهات وقعدات للمذاكرة</h3>
+  <div class="places-grid">
+   <article class="place-card"><div class="place-top"><div class="place-icon">☕</div><div><h3>بن الخيال</h3><span class="place-type">كافيه وقهوة</span></div></div><p>شارع أنور السادات / نطاق الجلاء البحري، شبين الكوم.</p><p>☎ 01119992676</p><div class="place-actions"><a href="tel:01119992676">اتصل بالمكان</a><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Ben+El+Khayal+Shebin+El+Kom">الخريطة</a></div></article>
+   <article class="place-card"><div class="place-top"><div class="place-icon">☕</div><div><h3>بن الديوان</h3><span class="place-type">كافيه</span></div></div><p>منطقة صبري أبو علم، شبين الكوم.</p><p>☎ 01028593440</p><div class="place-actions"><a href="tel:01028593440">اتصل بالمكان</a><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Ben+El+Diwan+Shebin+El+Kom">الخريطة</a></div></article>
+   <article class="place-card"><div class="place-top"><div class="place-icon">🧋</div><div><h3>One Million Café</h3><span class="place-type">كافيه</span></div></div><p>أمام كلية الهندسة، شارع جمال عبد الناصر، شبين الكوم.</p><p>☎ 01000703380</p><div class="place-actions"><a href="tel:01000703380">اتصل بالمكان</a><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=One+Million+Cafe+Shebin+El+Kom">الخريطة</a></div></article>
+   <article class="place-card"><div class="place-top"><div class="place-icon">🍩</div><div><h3>زلابيا كافيه</h3><span class="place-type">حلويات ومشروبات</span></div></div><p>شارع قبلي التعاونيات، بجوار الدمشقي، شبين الكوم.</p><p>☎ 01009697803</p><div class="place-actions"><a href="tel:01009697803">اتصل بالمكان</a><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Zalabya+Cafe+Shebin+El+Kom">الخريطة</a></div></article>
+   <article class="place-card"><div class="place-top"><div class="place-icon">📚</div><div><h3>كورتادو كوفي شوب</h3><span class="place-type">قهوة ومشروبات</span></div></div><p>15 شارع عاطف السادات، شبين الكوم.</p><p>☎ 0482050333 / 01093588893</p><div class="place-actions"><a href="tel:01093588893">اتصل بالمكان</a><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Cortado+Coffee+Shebin+El+Kom">الخريطة</a></div></article>
+   <article class="place-card"><div class="place-top"><div class="place-icon">🫖</div><div><h3>Stuff Café</h3><span class="place-type">كافيه</span></div></div><p>شارع جمال عبد الناصر، شبين الكوم.</p><p>☎ 01006767297</p><div class="place-actions"><a href="tel:01006767297">اتصل بالمكان</a><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Stuff+Cafe+Shebin+El+Kom">الخريطة</a></div></article>
+  </div>
+  <h3 class="section-mini-title" data-ar="💊 صيدليات في شبين الكوم" data-en="💊 Pharmacies in Shebin El-Kom">💊 صيدليات في شبين الكوم</h3>
+  <div class="places-grid" id="essentials">
+   <article class="place-card"><div class="place-top"><div class="place-icon">💊</div><div><h3>صيدليات العزبي</h3><span class="place-type">سلسلة صيدليات</span></div></div><p>من الفروع: امتداد شارع طلعت حرب بالبر الشرقي، وطريق مليج أمام المستشفى التعليمي.</p><p>☎ 19600</p><div class="place-actions"><a href="tel:19600">اتصل بالخط الساخن</a><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=El+Ezaby+Pharmacy+Shebin+El+Kom">الفروع على الخريطة</a></div></article>
+   <article class="place-card"><div class="place-top"><div class="place-icon">💊</div><div><h3>صيدليات كير</h3><span class="place-type">سلسلة صيدليات</span></div></div><p>منطقة ميدان شرف وشارع سعد زغلول، شبين الكوم؛ تحقق من أقرب فرع.</p><p>☎ 19757</p><div class="place-actions"><a href="tel:19757">اتصل بالخط الساخن</a><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Care+Pharmacies+Shebin+El+Kom">الفروع على الخريطة</a></div></article>
+   <article class="place-card"><div class="place-top"><div class="place-icon">💊</div><div><h3>صيدليات شعيب</h3><span class="place-type">صيدلية</span></div></div><p>شبين الكوم، محافظة المنوفية؛ تأكد من أقرب فرع عند الاتصال.</p><p>☎ 01113675635</p><div class="place-actions"><a href="tel:01113675635">اتصل بالصيدلية</a><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Shuaib+Pharmacies+Shebin+El+Kom">الخريطة</a></div></article>
+   <article class="place-card"><div class="place-top"><div class="place-icon">💊</div><div><h3>صيدلية الإسعاف</h3><span class="place-type">صيدلية</span></div></div><p>شارع طلعت حرب، شبين الكوم.</p><p>☎ 0482223227</p><div class="place-actions"><a href="tel:0482223227">اتصل بالصيدلية</a><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Pharmacy+El+Isaf+Shebin+El+Kom">الخريطة</a></div></article>
+   <article class="place-card"><div class="place-top"><div class="place-icon">💊</div><div><h3>صيدلية الرضا</h3><span class="place-type">صيدلية</span></div></div><p>4 شارع الجلاء البحري، شبين الكوم.</p><p>☎ 0482226880 / 01156651003</p><div class="place-actions"><a href="tel:01156651003">اتصل بالصيدلية</a><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Al+Reda+Pharmacy+Shebin+El+Kom">الخريطة</a></div></article>
+   <article class="place-card"><div class="place-top"><div class="place-icon">💊</div><div><h3>صيدلية د. أحمد وحيد</h3><span class="place-type">صيدلية</span></div></div><p>14 شارع عاطف السادات، شبين الكوم.</p><p>☎ 01062002025</p><div class="place-actions"><a href="tel:01062002025">اتصل بالصيدلية</a><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Ahmed+Waheed+Pharmacy+Shebin+El+Kom">الخريطة</a></div></article>
+  </div>
+  <p class="data-note" data-ar="ملاحظة: جُمعت بيانات الأماكن والأرقام من أدلة عامة على الإنترنت وقت إعداد النسخة. اتصل بالمكان أو افتح الخريطة للتأكد من الرقم والعنوان ومواعيد العمل قبل الزيارة؛ بعض البيانات قد تتغير." data-en="Note: Place details and phone numbers were collected from public online directories when this version was prepared. Call or open the map to confirm details and opening hours before visiting; information may change.">ملاحظة: جُمعت بيانات الأماكن والأرقام من أدلة عامة على الإنترنت وقت إعداد النسخة. اتصل بالمكان أو افتح الخريطة للتأكد من الرقم والعنوان ومواعيد العمل قبل الزيارة؛ بعض البيانات قد تتغير.</p>
+
+ </div>
+</section>
+
+<section id="housing">
+ <div class="wrap">
+  <div class="section-head"><div><div class="eyebrow">LIVING & GETTING AROUND</div><h2 data-ar="السكن والمواصلات" data-en="Housing & transportation">السكن والمواصلات</h2></div><p data-ar="معلومات تساعد الطالب يجهز نفسه قبل الوصول، ويقارن الخيارات بهدوء قبل اتخاذ القرار." data-en="Helpful information for preparing before arrival and comparing options carefully.">معلومات تساعد الطالب يجهز نفسه قبل الوصول، ويقارن الخيارات بهدوء قبل اتخاذ القرار.</p></div>
+  <div class="split">
+   <div class="info-panel"><h3 data-ar="🏠 قبل ما تختار السكن" data-en="🏠 Before choosing housing">🏠 قبل ما تختار السكن</h3><ul class="list"><li><span class="check">1</span><span data-ar="اسأل شؤون الطلاب أو الجهة الجامعية المختصة عن شروط المدن الجامعية للطلاب الوافدين." data-en="Ask the relevant student affairs office about dorm eligibility for international students.">اسأل شؤون الطلاب أو الجهة الجامعية المختصة عن شروط المدن الجامعية للطلاب الوافدين.</span></li><li><span class="check">2</span><span data-ar="عاين السكن بنفسك أو بمساعدة شخص موثوق، وتأكد من العنوان والمرافق." data-en="Inspect the accommodation, in person or with a trusted person, and check the address and facilities.">عاين السكن بنفسك أو بمساعدة شخص موثوق، وتأكد من العنوان والمرافق.</span></li><li><span class="check">3</span><span data-ar="اتفق كتابةً على الإيجار والتأمين والفواتير ومدة الإقامة." data-en="Get rent, deposit, utilities, and duration in writing.">اتفق كتابةً على الإيجار والتأمين والفواتير ومدة الإقامة.</span></li><li><span class="check">4</span><span data-ar="ما تحولش فلوس قبل ما تتأكد من الشخص والمكان وشروط الاتفاق." data-en="Do not transfer money before verifying the person, property, and terms.">ما تحولش فلوس قبل ما تتأكد من الشخص والمكان وشروط الاتفاق.</span></li></ul></div>
+   <div class="info-panel"><h3 data-ar="🚌 التنقل داخل شبين الكوم" data-en="🚌 Getting around Shebin El-Kom">🚌 التنقل داخل شبين الكوم</h3><ul class="list"><li><span class="check">✓</span><span data-ar="احفظ عنوان سكنك ومبنى كليتك بالعربي على موبايلك." data-en="Save your accommodation and faculty addresses in Arabic on your phone.">احفظ عنوان سكنك ومبنى كليتك بالعربي على موبايلك.</span></li><li><span class="check">✓</span><span data-ar="اسأل عن الأجرة والمسار قبل الركوب، واحتفظ بفكة إن أمكن." data-en="Confirm the fare and route before boarding; carry small cash if possible.">اسأل عن الأجرة والمسار قبل الركوب، واحتفظ بفكة إن أمكن.</span></li><li><span class="check">✓</span><span data-ar="استخدم خريطة موثوقة، واطلب من الجامعة تأكيد أفضل طريق للحرم الجامعي." data-en="Use a trusted map and ask the university to confirm the best route to campus.">استخدم خريطة موثوقة، واطلب من الجامعة تأكيد أفضل طريق للحرم الجامعي.</span></li></ul></div>
+  </div>
+ </div>
+</section>
+
+<section class="soft" id="university">
+ <div class="wrap">
+  <div class="section-head"><div><div class="eyebrow">UNIVERSITY LIFE</div><h2 data-ar="الخدمات والإرشادات الجامعية" data-en="University guidance & services">الخدمات والإرشادات الجامعية</h2></div><p data-ar="الإجراءات قد تختلف حسب الكلية والبرنامج وحالة الطالب؛ اعتبر القائمة دي نقطة بداية واسأل الجهة الرسمية عن التفاصيل الحالية." data-en="Procedures may vary by faculty, program, and student status. Use this checklist as a starting point and confirm current details with official university offices.">الإجراءات قد تختلف حسب الكلية والبرنامج وحالة الطالب؛ اعتبر القائمة دي نقطة بداية واسأل الجهة الرسمية عن التفاصيل الحالية.</p></div>
+  <div class="category-grid">
+   <article class="info-panel"><h3 data-ar="📄 الأوراق والتسجيل" data-en="📄 Documents & registration">📄 الأوراق والتسجيل</h3><p data-ar="جهّز جواز السفر وأوراق القبول وأي مستندات تطلبها الجامعة، وتأكد من النسخ والترجمات المطلوبة من الجهة المختصة." data-en="Prepare your passport, admission documents, and any records requested by the university. Confirm translation and copy requirements with the relevant office.">جهّز جواز السفر وأوراق القبول وأي مستندات تطلبها الجامعة، وتأكد من النسخ والترجمات المطلوبة من الجهة المختصة.</p></article>
+   <article class="info-panel"><h3 data-ar="🧭 الوصول للجهة الصح" data-en="🧭 Find the right office">🧭 الوصول للجهة الصح</h3><p data-ar="ابدأ بشؤون الطلاب أو مكتب الطلاب الوافدين، واشرح طلبك بوضوح واسأل عن الخطوة التالية وموعد المتابعة." data-en="Start with student affairs or the international students office, explain your request, and ask for the next step and follow-up date.">ابدأ بشؤون الطلاب أو مكتب الطلاب الوافدين، واشرح طلبك بوضوح واسأل عن الخطوة التالية وموعد المتابعة.</p></article>
+   <article class="info-panel"><h3 data-ar="📚 الدعم الأكاديمي" data-en="📚 Academic support">📚 الدعم الأكاديمي</h3><p data-ar="اسأل عن الجدول الدراسي، نظام الحضور، المنصة التعليمية، المكتبة، ومواعيد الامتحانات من مصادر الكلية الرسمية." data-en="Check class schedules, attendance rules, learning platforms, library access, and exam dates through official faculty sources.">اسأل عن الجدول الدراسي، نظام الحضور، المنصة التعليمية، المكتبة، ومواعيد الامتحانات من مصادر الكلية الرسمية.</p></article>
+  </div>
+ </div>
+</section>
+
+<section id="help">
+ <div class="wrap">
+  <div class="section-head"><div><div class="eyebrow">WHEN YOU NEED HELP</div><h2 data-ar="لو قابلتك مشكلة، تبدأ منين؟" data-en="Facing a problem? Start here.">لو قابلتك مشكلة، تبدأ منين؟</h2></div><p data-ar="خطوات عامة تساعدك ترتّب المشكلة وتوصل للجهة المناسبة بدل ما تحتار." data-en="Simple steps to organize the issue and find the right support.">خطوات عامة تساعدك ترتّب المشكلة وتوصل للجهة المناسبة بدل ما تحتار.</p></div>
+  <div class="help-grid">
+   <article class="help"><div class="icon">🎓</div><h3 data-ar="مشكلة دراسية" data-en="Academic issue">مشكلة دراسية</h3><p data-ar="احتفظ برقمك الجامعي والمستندات، وتواصل مع شؤون الطلاب أو المرشد الأكاديمي، ودوّن موعد المتابعة." data-en="Keep your student number and documents ready. Contact student affairs or your academic adviser and note the follow-up date.">احتفظ برقمك الجامعي والمستندات، وتواصل مع شؤون الطلاب أو المرشد الأكاديمي، ودوّن موعد المتابعة.</p></article>
+   <article class="help"><div class="icon">🏠</div><h3 data-ar="مشكلة في السكن" data-en="Housing issue">مشكلة في السكن</h3><p data-ar="وثّق الاتفاق والمراسلات، واطلب المساعدة من شخص موثوق أو جهة مختصة، وتجنب التصعيد أو الدفع الإضافي دون توثيق." data-en="Keep agreements and messages, seek trusted or appropriate support, and avoid undocumented extra payments.">وثّق الاتفاق والمراسلات، واطلب المساعدة من شخص موثوق أو جهة مختصة، وتجنب التصعيد أو الدفع الإضافي دون توثيق.</p></article>
+   <article class="help"><div class="icon">🗣️</div><h3 data-ar="صعوبة اللغة أو التواصل" data-en="Language or communication">صعوبة اللغة أو التواصل</h3><p data-ar="اكتب المشكلة في نقاط، واستخدم ترجمة موثوقة، واطلب من مكتب الطلاب الوافدين توضيح الخطوات بلغة تفهمها." data-en="Write the issue in bullet points, use a reliable translation tool, and ask the international students office to clarify the steps.">اكتب المشكلة في نقاط، واستخدم ترجمة موثوقة، واطلب من مكتب الطلاب الوافدين توضيح الخطوات بلغة تفهمها.</p></article>
+   <article class="help"><div class="icon">🩺</div><h3 data-ar="موقف صحي عاجل" data-en="Medical emergency">موقف صحي عاجل</h3><p data-ar="اطلب المساعدة الطبية فورًا واتصل بخدمات الطوارئ الرسمية عند الضرورة. لا تعتمد على معلومات دليل غير محدثة." data-en="Seek medical help immediately and contact official emergency services when necessary. Do not rely on an unverified directory.">اطلب المساعدة الطبية فورًا واتصل بخدمات الطوارئ الرسمية عند الضرورة. لا تعتمد على معلومات دليل غير محدثة.</p></article>
+   <article class="help"><div class="icon">📱</div><h3 data-ar="مشكلة في خدمة أو معاملة" data-en="Service or paperwork issue">مشكلة في خدمة أو معاملة</h3><p data-ar="احتفظ بالإيصالات وأرقام الطلبات، وحدد اسم الجهة وتاريخ تقديم الطلب، ثم اسأل عن مسار الشكوى الرسمي." data-en="Keep receipts and reference numbers, note the office and submission date, then ask for the official complaint process.">احتفظ بالإيصالات وأرقام الطلبات، وحدد اسم الجهة وتاريخ تقديم الطلب، ثم اسأل عن مسار الشكوى الرسمي.</p></article>
+   <article class="help"><div class="icon">🤝</div><h3 data-ar="مش عارف تبدأ منين؟" data-en="Not sure where to start?">مش عارف تبدأ منين؟</h3><p data-ar="ابدأ بمكتب شؤون الطلاب أو الجهة الجامعية المختصة، واشرح المشكلة باختصار واطلب تحويلك للمسؤول الصحيح." data-en="Start with student affairs or the relevant university office and ask to be directed to the right person.">ابدأ بمكتب شؤون الطلاب أو الجهة الجامعية المختصة، واشرح المشكلة باختصار واطلب تحويلك للمسؤول الصحيح.</p></article>
+  </div>
+ </div>
+</section>
+
+<section class="soft" id="team">
+ <div class="wrap">
+  <div class="section-head"><div><div class="eyebrow">OUR TEAM</div><h2 data-ar="فريق رفيقك الجامعي" data-en="Meet the team">فريق رفيقك الجامعي</h2></div><p data-ar="أربعة أفراد بيشتغلوا على إعداد دليل عملي يساعد الطالب الوافد في حياته اليومية والجامعية." data-en="Four team members working together to create a practical guide for international students.">أربعة أفراد بيشتغلوا على إعداد دليل عملي يساعد الطالب الوافد في حياته اليومية والجامعية.</p></div>
+  <div class="team">
+   <article class="member"><div class="avatar">م ع</div><h3>محمد عباس</h3><p data-ar="قائد الفريق" data-en="Team leader">قائد الفريق</p></article>
+   <article class="member"><div class="avatar">ي م</div><h3>يوسف محمد</h3><p data-ar="عضو فريق المشروع" data-en="Project team member">عضو فريق المشروع</p></article>
+   <article class="member"><div class="avatar">ع أ</div><h3>عبدالرحمن أسامه</h3><p data-ar="عضو فريق المشروع" data-en="Project team member">عضو فريق المشروع</p></article>
+   <article class="member"><div class="avatar">ع ع</div><h3>عمرو عزام</h3><p data-ar="عضو فريق المشروع" data-en="Project team member">عضو فريق المشروع</p></article>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="wrap"><div class="callout"><div><h2 data-ar="دليل بيتطور بمشاركة الطلاب" data-en="A guide that grows with students">دليل بيتطور بمشاركة الطلاب</h2><p data-ar="قبل نشر بيانات الأماكن أو أرقام الهاتف، لازم الفريق يتحقق منها ويضيف تاريخ آخر مراجعة." data-en="Before publishing place details or phone numbers, the team should verify them and record the last review date.">قبل نشر بيانات الأماكن أو أرقام الهاتف، لازم الفريق يتحقق منها ويضيف تاريخ آخر مراجعة.</p></div><a class="btn" href="#guide" data-ar="ارجع للأقسام ↑" data-en="Back to sections ↑">ارجع للأقسام ↑</a></div></div>
+</section>
+</main>
+<footer><div class="wrap foot"><div><strong>رفيقك الجامعي</strong><br><span data-ar="دليل إرشادي للطلاب الوافدين — جامعة المنوفية" data-en="A practical guide for international students — Menoufia University">دليل إرشادي للطلاب الوافدين — جامعة المنوفية</span></div><div data-ar="نسخة تجريبية أولية • يجب التحقق من بيانات الأماكن قبل النشر" data-en="Early prototype • Place details must be verified before publication">نسخة تجريبية أولية • يجب التحقق من بيانات الأماكن قبل النشر</div></div></footer>
+<div id="google_translate_element" aria-hidden="true"></div>
+<script>
+(function(){
+  window.googleTranslateElementInit = function(){
+    try {
+      if (window.google && google.translate) {
+        new google.translate.TranslateElement({pageLanguage:'ar',includedLanguages:'en,fr,zh-CN,tr,ru',autoDisplay:false},'google_translate_element');
+        window.__rafTranslateReady=true;
+        if(window.__rafApplyPendingLanguage) window.__rafApplyPendingLanguage();
+      }
+    } catch(e) { window.__rafTranslateError=true; }
+  };
+})();
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+(() => {
+  const menuBtn=document.getElementById('menuBtn'), navLinks=document.getElementById('navLinks'), languageSelect=document.getElementById('languageSelect'), searchInput=document.getElementById('searchInput');
+  if(!menuBtn||!navLinks||!languageSelect||!searchInput) return;
+  const ui={
+    ar:{menu:'☰ القائمة',search:'ابحث عن مطعم أو كافيه أو صيدلية أو قسم...',aria:'ابحث في الدليل',title:'رفيقك الجامعي | دليلك في المنوفية',results:(p,c)=>`نتيجة البحث: ${p} مكان و${c} قسم.`,none:'مفيش نتائج مطابقة. جرّب اسم المكان أو نوعه، زي مطعم أو صيدلية أو كافيه.',offline:'تعذّر تحميل الترجمة. تأكد من اتصال الإنترنت ثم جرّب مرة أخرى.'},
+    en:{menu:'☰ Menu',search:'Search restaurants, cafés, pharmacies, or sections...',aria:'Search the guide',title:'Rafeeqak Al-Jami‘i | Menoufia Guide',results:(p,c)=>`Search results: ${p} places and ${c} sections.`,none:'No matches. Try a place name or category.',offline:'Translation could not load. Check your internet connection and try again.'},
+    fr:{menu:'☰ Menu',search:'Rechercher restaurants, cafés, pharmacies ou rubriques...',aria:'Rechercher dans le guide',title:'Rafeeqak Al-Jami‘i | Guide de Menoufia',results:(p,c)=>`Résultats : ${p} lieux et ${c} rubriques.`,none:'Aucun résultat. Essayez un nom ou une catégorie.',offline:'La traduction ne s’est pas chargée. Vérifiez votre connexion et réessayez.'},
+    'zh-CN':{menu:'☰ 菜单',search:'搜索餐厅、咖啡馆、药店或栏目…',aria:'搜索指南',title:'大学伙伴 | 梅努菲亚指南',results:(p,c)=>`搜索结果：${p} 个地点，${c} 个栏目。`,none:'没有匹配结果。请尝试地点名称或类别。',offline:'翻译未能加载。请检查网络连接后重试。'},
+    tr:{menu:'☰ Menü',search:'Restoran, kafe, eczane veya bölüm ara...',aria:'Rehberde ara',title:'Üniversite Rehberin | Menoufia',results:(p,c)=>`Arama sonuçları: ${p} yer ve ${c} bölüm.`,none:'Sonuç bulunamadı. Bir yer adı veya kategori deneyin.',offline:'Çeviri yüklenemedi. İnternet bağlantınızı kontrol edip tekrar deneyin.'},
+    ru:{menu:'☰ Меню',search:'Поиск ресторанов, кафе, аптек или разделов...',aria:'Поиск по справочнику',title:'Твой университетский помощник | Менуфия',results:(p,c)=>`Результаты: мест — ${p}, разделов — ${c}.`,none:'Ничего не найдено. Попробуйте название или категорию.',offline:'Перевод не загрузился. Проверьте подключение к интернету и попробуйте снова.'}
+  };
+  const categoryCards=[...document.querySelectorAll('#categoryGrid .cat-card')], placeCards=[...document.querySelectorAll('.place-card')], allCards=[...categoryCards,...placeCards];
+  const aliases={
+    'ar':'مطعم restaurant restaurants food café cafe coffee صيدلية pharmacy pharmacies دواء medicine سكن housing dorms accommodation مواصلات transport bus جامعة university student services خدمات جامعية',
+    'en':'restaurant restaurants food café cafe coffee pharmacy pharmacies medicine housing dorms accommodation transport bus university student services',
+    'fr':'restaurant restaurants nourriture café cafés pharmacie pharmacies médicament logement résidence transport université services étudiants',
+    'zh-CN':'餐厅 饭店 咖啡馆 药店 药房 住宿 宿舍 交通 大学 学生服务',
+    'tr':'restoran kafeler kafe eczane eczaneler ilaç konaklama yurt ulaşım üniversite öğrenci hizmetleri',
+    'ru':'ресторан кафе аптека аптеки лекарство жильё общежитие транспорт университет студенческие услуги'
+  };
+  const norm=v=>(v||'').toLocaleLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[أإآ]/g,'ا').replace(/ى/g,'ي').replace(/ة/g,'ه').replace(/[^\p{L}\p{N}]+/gu,' ').trim();
+  allCards.forEach(card=>{card.dataset.searchOriginal=(card.innerText||'')+' '+(card.dataset.keywords||'');});
+  let resultMessage=document.getElementById('searchResultsMessage');
+  if(!resultMessage){resultMessage=document.createElement('p');resultMessage.id='searchResultsMessage';resultMessage.setAttribute('role','status');resultMessage.style.cssText='margin:0 0 16px;color:#52635c;font-weight:700';searchInput.parentElement.insertAdjacentElement('afterend',resultMessage);}
+  let currentLang='ar', pendingLang=null, translationTimer=null;
+  const tagged=[...document.querySelectorAll('[data-ar]')], originals=new WeakMap();
+  tagged.forEach(el=>originals.set(el,el.dataset.ar));
+  const navLabels={ar:['أقسام الدليل','المطاعم والكافيهات','الصيدليات','السكن والمواصلات','الخدمات الجامعية','حل المشكلات','فريق العمل'],en:['Guide sections','Restaurants & cafés','Pharmacies','Housing & transport','University services','Problem solving','Team'],fr:['Rubriques du guide','Restaurants et cafés','Pharmacies','Logement et transport','Services universitaires','Résoudre les problèmes','Équipe'], 'zh-CN':['指南栏目','餐厅和咖啡馆','药店','住宿和交通','大学服务','问题解决','团队'],tr:['Rehber bölümleri','Restoranlar ve kafeler','Eczaneler','Konaklama ve ulaşım','Üniversite hizmetleri','Sorun çözümü','Ekip'],ru:['Разделы справочника','Рестораны и кафе','Аптеки','Жильё и транспорт','Университетские услуги','Решение проблем','Команда']};
+  function setChrome(lang){const t=ui[lang]||ui.en;menuBtn.textContent=t.menu;searchInput.placeholder=t.search;searchInput.setAttribute('aria-label',t.aria);document.title=t.title;document.documentElement.lang=lang;document.documentElement.dir=lang==='ar'?'rtl':'ltr';const links=[...navLinks.querySelectorAll('a')];(navLabels[lang]||navLabels.en).forEach((label,i)=>{if(links[i])links[i].textContent=label;});const picker=document.querySelector('.language-picker');if(picker)picker.setAttribute('aria-label',lang==='ar'?'اختار اللغة':'Choose language');}
+  function restoreArabicTaggedText(){tagged.forEach(el=>{if(originals.has(el))el.innerHTML=originals.get(el);});}
+  function getCombo(){return document.querySelector('#google_translate_element select.goog-te-combo')||document.querySelector('select.goog-te-combo');}
+  function translateTo(lang){currentLang=lang;setChrome(lang);if(translationTimer){clearTimeout(translationTimer);translationTimer=null;}if(lang==='ar'){const combo=getCombo();if(combo){combo.value='';combo.dispatchEvent(new Event('change',{bubbles:true}));}document.cookie='googtrans=/ar/ar;path=/';restoreArabicTaggedText();setTimeout(runSearch,250);return;}
+    pendingLang=lang;const tryTranslate=(attempt)=>{const combo=getCombo();if(combo){pendingLang=null;combo.value=lang;combo.dispatchEvent(new Event('change',{bubbles:true}));setTimeout(runSearch,500);setTimeout(runSearch,1500);return;}if(attempt<20){translationTimer=setTimeout(()=>tryTranslate(attempt+1),250);}else{resultMessage.textContent=(ui[lang]||ui.en).offline;}};
+    tryTranslate(0);
+  }
+  window.__rafApplyPendingLanguage=()=>{if(pendingLang){const lang=pendingLang;pendingLang=null;translateTo(lang);}};
+  menuBtn.dataset.primaryBound='1';menuBtn.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();const open=navLinks.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));});
+  navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navLinks.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');}));
+  document.addEventListener('click',e=>{if(!navLinks.contains(e.target)&&!menuBtn.contains(e.target)){navLinks.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');}});
+  languageSelect.addEventListener('change',()=>translateTo(languageSelect.value));
+  function runSearch(){const q=norm(searchInput.value);let categoryCount=0,placeCount=0;const aliasText=norm(aliases[currentLang]||'');const synonyms=q && aliasText.split(' ').includes(q) ? norm(aliases.ar+' '+aliases.en+' '+aliases.fr+' '+aliases['zh-CN']+' '+aliases.tr+' '+aliases.ru) : '';
+    categoryCards.forEach(card=>{const text=norm((card.dataset.searchOriginal||'')+' '+(card.innerText||'')+' '+(card.dataset.keywords||''));const match=!q||text.includes(q)||norm(card.dataset.keywords||'').includes(q)||(synonyms && (text.includes('restaurant')||text.includes('pharmacy')||text.includes('cafe')||text.includes('مطعم')||text.includes('صيدليه')||text.includes('كافيه')));card.classList.toggle('hidden',!match);if(match&&q)categoryCount++;});
+    placeCards.forEach(card=>{const text=norm((card.dataset.searchOriginal||'')+' '+(card.innerText||'')+' '+(card.dataset.keywords||''));const type=norm((card.querySelector('.place-type')||{}).innerText||'');const match=!q||text.includes(q)||type.includes(q)||(synonyms&&type.length>0&&((synonyms.includes('restaurant')&&/مطعم|شاورما|مشويات|وجبات|بيتزا|اكل/.test(text))||(synonyms.includes('pharmacy')&&/صيدل|دواء|pharmacy/.test(text))||(synonyms.includes('cafe')&&/كافيه|قهوه|cafe|coffee/.test(text))));card.classList.toggle('hidden',!match);if(match&&q)placeCount++;});
+    document.querySelectorAll('.places-grid').forEach(grid=>{const visible=[...grid.querySelectorAll('.place-card')].some(card=>!card.classList.contains('hidden'));grid.classList.toggle('hidden',!!q&&!visible);const heading=grid.previousElementSibling;if(heading&&heading.classList.contains('section-mini-title'))heading.classList.toggle('hidden',!!q&&!visible);});
+    const catGrid=document.getElementById('categoryGrid');if(catGrid)catGrid.classList.toggle('hidden',!!q&&!categoryCards.some(card=>!card.classList.contains('hidden')));
+    // Keep headings/sections that contain no matching cards out of the way during a search.
+    document.querySelectorAll('#restaurants .section-head,#essentials .section-head').forEach(el=>el.classList.toggle('hidden',!!q));
+    if(!q){resultMessage.textContent='';return;}const t=ui[currentLang]||ui.en;const total=categoryCount+placeCount;resultMessage.textContent=total?t.results(placeCount,categoryCount):t.none;
+  }
+  searchInput.dataset.primaryBound='1';searchInput.addEventListener('input',runSearch);
+  setChrome('ar');runSearch();
+})();
+</script>
+<script>
+/* Resilient interaction fallback: works even if the main initializer fails partway. */
+(function(){
+  function initRafeeqInteractions(){
+    const menu=document.getElementById('menuBtn');
+    const nav=document.getElementById('navLinks');
+    const input=document.getElementById('searchInput');
+    if(menu && nav && !menu.dataset.primaryBound && !menu.dataset.fallbackBound){
+      menu.dataset.fallbackBound='1';
+      menu.addEventListener('click',function(ev){
+        ev.preventDefault();
+        const opened=nav.classList.toggle('open');
+        menu.setAttribute('aria-expanded',String(opened));
+      });
+      nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');menu.setAttribute('aria-expanded','false');});});
+    }
+    if(input && !input.dataset.primaryBound && !input.dataset.fallbackBound){
+      input.dataset.fallbackBound='1';
+      input.addEventListener('input',function(){
+        const q=(input.value||'').toLocaleLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[أإآ]/g,'ا').replace(/ى/g,'ي').replace(/ة/g,'ه').trim();
+        const cards=Array.from(document.querySelectorAll('.place-card, #categoryGrid .cat-card'));
+        let visible=0;
+        cards.forEach(function(card){
+          const txt=((card.innerText||'')+' '+(card.dataset.keywords||'')).toLocaleLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[أإآ]/g,'ا').replace(/ى/g,'ي').replace(/ة/g,'ه');
+          const match=!q || txt.includes(q);
+          card.classList.toggle('hidden',!match);
+          if(match) visible++;
+        });
+        document.querySelectorAll('.places-grid').forEach(function(grid){
+          const any=Array.from(grid.querySelectorAll('.place-card')).some(function(c){return !c.classList.contains('hidden');});
+          grid.classList.toggle('hidden',!!q&&!any);
+        });
+        const status=document.getElementById('searchResultsMessage');
+        if(status) status.textContent=q ? (visible ? ('نتائج البحث: '+visible) : 'مفيش نتائج مطابقة. جرّب كلمة تانية.') : '';
+      });
+    }
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',initRafeeqInteractions); else initRafeeqInteractions();
+})();
+</script>
+</body>
+</html>
